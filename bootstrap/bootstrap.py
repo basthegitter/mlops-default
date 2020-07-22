@@ -8,8 +8,8 @@ import re
 class Helper:
 
     def __init__(self, project_directory, project_name):
-        self._project_directory = project_directory
-        self._project_name = project_name
+        self._project_directory = ""
+        self._project_name = "usecaseX"
         self._git_repo = "https://github.com/microsoft/MLOpsPython.git"
 
     @property
@@ -130,6 +130,7 @@ def main(args):
                         required=True,
                         help="Name of the project [3-15 chars, letters and underscores only]")  # NOQA: E501
     try:
+        print('start')
         args = parser.parse_args()
 
         project_directory = args.directory
